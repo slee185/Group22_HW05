@@ -7,6 +7,7 @@ package com.example.group22_hw05;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.SeekBar;
 
 import com.example.group22_hw05.databinding.ActivityMainBinding;
 
@@ -25,10 +26,27 @@ public class MainActivity extends AppCompatActivity {
 
         threadPool = Executors.newFixedThreadPool(2);
         binding.buttonGenerate.setOnClickListener(v -> threadPool.execute(new DoWork()));
+        binding.seekBarComplexity.setMax(20);
+        binding.textViewSelectedNumber.setText(getString(R.string.text_view_selected_number, 0));
+        binding.seekBarComplexity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                binding.textViewSelectedNumber.setText(getString(R.string.text_view_selected_number, i));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     static class DoWork implements Runnable {
-
         @Override
         public void run() {
 
