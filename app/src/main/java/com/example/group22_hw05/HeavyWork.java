@@ -1,3 +1,7 @@
+// Homework 05
+// HeavyWork.java
+// Ken Stanley & Stephanie Karp
+
 package com.example.group22_hw05;
 
 import java.util.Random;

@@ -1,3 +1,7 @@
+// Homework 05
+// MainActivity.java
+// Ken Stanley & Stephanie Karp
+
 package com.example.group22_hw05;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +15,6 @@ import java.util.concurrent.Executors;
 public class MainActivity extends AppCompatActivity {
 
     Executor threadPool;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
