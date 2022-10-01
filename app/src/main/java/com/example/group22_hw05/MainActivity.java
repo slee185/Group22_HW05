@@ -7,7 +7,6 @@ package com.example.group22_hw05;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -15,6 +14,7 @@ import java.util.concurrent.Executors;
 public class MainActivity extends AppCompatActivity {
 
     Executor threadPool;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonGenerate).setOnClickListener(v -> threadPool.execute(new DoWork()));
     }
 
-    class DoWork implements Runnable {
+    static class DoWork implements Runnable {
 
         @Override
         public void run() {
