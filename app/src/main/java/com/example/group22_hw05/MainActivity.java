@@ -4,7 +4,6 @@
 
 package com.example.group22_hw05;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
