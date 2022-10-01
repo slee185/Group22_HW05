@@ -4,4 +4,6 @@
     <string name="text_view_select_complexity">Select Complexity</string>
 
     <string name="text_view_selected_number">%d Times</string>
+    <string name="text_view_progress">%d/%d</string>
+    <string name="text_view_average">Average: %f</string>
 </resources>
